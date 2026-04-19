@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free AI Watermark Remover for Photo, Video & PDF. Easily remove watermarks online.">
+    <title>Free AI Watermark Remover for Photo, Video & PDF</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Header Navigation -->
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex-shrink-0 font-bold text-xl text-blue-600">
+                <a href="/">Watermark Remover</a>
+            </div>
+            <nav class="flex space-x-4">
+                <a href="/" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="/about" class="text-gray-600 hover:text-blue-600">About</a>
+                <a href="/contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- AdSense: Header Placement -->
+    <div class="w-full bg-gray-200 py-4 flex justify-center items-center my-4">
+        <!-- Google AdSense Header Placeholder -->
+        <span class="text-gray-500 text-sm">Ad Placement: Header</span>
+    </div>
+
+    <main class="flex-grow flex flex-col md:flex-row max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 gap-8">
+        
+        <!-- Main Content Area -->
+        <div class="w-full md:w-3/4">
+            
+            <!-- Hero Section -->
+            <section class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
+                    Free AI Watermark Remover for Photo, Video & PDF
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Quickly and easily remove watermarks from your files with our advanced AI tools. Supports images (JPG/PNG), videos (MP4), and PDFs.
+                </p>
+            </section>
+
+            <!-- Upload Area -->
+            <section class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
+                <div id="drop-zone" class="border-4 border-dashed border-blue-300 rounded-lg p-12 text-center hover:bg-blue-50 transition duration-300 cursor-pointer">
+                    <svg class="mx-auto h-16 w-16 text-blue-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <p class="text-xl font-medium text-gray-700 mb-2">Drag & Drop your file here</p>
+                    <p class="text-sm text-gray-500 mb-6">or</p>
+                    <input type="file" id="file-input" class="hidden" accept=".jpg,.jpeg,.png,.mp4,.avi,.mov,.pdf">
+                    <button id="browse-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                        Browse Files
+                    </button>
+                    <p class="text-xs text-gray-400 mt-4">Supported formats: JPG, PNG, MP4, AVI, MOV, PDF</p>
+                </div>
+
+                <!-- Processing UI -->
+                <div id="processing-ui" class="hidden mt-8 text-center">
+                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
+                    <p class="text-lg text-gray-700">Processing your file...</p>
+                    <p class="text-sm text-gray-500">This might take a few moments depending on the file size.</p>
+                </div>
+
+                <!-- Result UI -->
+                <div id="result-ui" class="hidden mt-8 text-center">
+                    <div class="text-green-500 mb-4">
+                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <p class="text-xl font-medium text-gray-800 mb-4">Processing Complete!</p>
+                    <a id="download-link" href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                        Download Processed File
+                    </a>
+                    <button id="reset-btn" class="block mx-auto mt-4 text-blue-600 hover:text-blue-800 text-sm">
+                        Process another file
+                    </button>
+                </div>
+            </section>
+
+            <!-- AdSense: In-Content Placement -->
+            <div class="w-full bg-gray-200 py-12 flex justify-center items-center mt-12 mb-8">
+                <!-- Google AdSense In-content Placeholder -->
+                <span class="text-gray-500 text-sm">Ad Placement: In-Content</span>
+            </div>
+            
+        </div>
+
+        <!-- Sidebar Area -->
+        <aside class="w-full md:w-1/4 flex flex-col gap-6">
+            <!-- AdSense: Sidebar Placement -->
+            <div class="w-full h-64 bg-gray-200 flex justify-center items-center">
+                <!-- Google AdSense Sidebar Placeholder -->
+                <span class="text-gray-500 text-sm">Ad Placement: Sidebar (Desktop)</span>
+            </div>
+            <div class="w-full h-64 bg-gray-200 flex justify-center items-center hidden md:flex">
+                <!-- Google AdSense Sidebar Placeholder 2 -->
+                <span class="text-gray-500 text-sm">Ad Placement: Sidebar 2</span>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- AdSense: Footer Placement -->
+    <div class="w-full bg-gray-200 py-4 flex justify-center items-center my-4 max-w-7xl mx-auto">
+        <!-- Google AdSense Footer Placeholder -->
+        <span class="text-gray-500 text-sm">Ad Placement: Footer</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">&copy; 2023 Watermark Remover. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
+                <a href="/privacy" class="text-gray-500 hover:text-gray-900">Privacy Policy</a>
+                <a href="/terms" class="text-gray-500 hover:text-gray-900">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

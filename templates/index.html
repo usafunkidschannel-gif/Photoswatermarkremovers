@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free AI Watermark Remover for Photo, Video & PDF. Easily remove watermarks online.">
     <title>Free AI Watermark Remover for Photo, Video & PDF</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
 
-    <!-- Header Navigation -->
     <header class="bg-white shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex-shrink-0 font-bold text-xl text-blue-600">
@@ -24,18 +22,14 @@
         </div>
     </header>
 
-    <!-- AdSense: Header Placement -->
     <div class="w-full bg-gray-200 py-4 flex justify-center items-center my-4">
-        <!-- Google AdSense Header Placeholder -->
         <span class="text-gray-500 text-sm">Ad Placement: Header</span>
     </div>
 
     <main class="flex-grow flex flex-col md:flex-row max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 gap-8">
         
-        <!-- Main Content Area -->
         <div class="w-full md:w-3/4">
             
-            <!-- Hero Section -->
             <section class="text-center mb-12">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                     Free AI Watermark Remover for Photo, Video & PDF
@@ -45,7 +39,6 @@
                 </p>
             </section>
 
-            <!-- Upload Area -->
             <section class="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
                 <div id="drop-zone" class="border-4 border-dashed border-blue-300 rounded-lg p-12 text-center hover:bg-blue-50 transition duration-300 cursor-pointer">
                     <svg class="mx-auto h-16 w-16 text-blue-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -53,180 +46,128 @@
                     </svg>
                     <p class="text-xl font-medium text-gray-700 mb-2">Drag & Drop your file here</p>
                     <p class="text-sm text-gray-500 mb-6">or</p>
-                    <input type="file" id="file-input" class="hidden" accept=".jpg,.jpeg,.png,.mp4,.avi,.mov,.pdf">
-                    <input type="file" id="file-input" style="display: none;" accept=".jpg, .png, .mp4, .pdf">
+                    
+                    <input type="file" id="file-input" style="display: none;" accept=".jpg,.png,.mp4,.pdf">
+                    
                     <button id="browse-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
                         Browse Files
                     </button>
-                    <p class="text-xs text-gray-400 mt-4">Supported formats: JPG, PNG, MP4, AVI, MOV, PDF</p>
-                </div>
-
-                <!-- Processing UI -->
-                <div id="processing-ui" class="hidden mt-8 text-center">
-                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mb-4"></div>
-                    <p class="text-lg text-gray-700">Processing your file...</p>
-                    <p class="text-sm text-gray-500">This might take a few moments depending on the file size.</p>
-                </div>
-
-                <!-- Result UI -->
-                <div id="result-ui" class="hidden mt-8 text-center">
-                    <div class="text-green-500 mb-4">
-                        <svg class="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <p class="text-xl font-medium text-gray-800 mb-4">Processing Complete!</p>
-                    <a id="download-link" href="#" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">
-                        Download Processed File
-                    </a>
-                    <button id="reset-btn" class="block mx-auto mt-4 text-blue-600 hover:text-blue-800 text-sm">
-                        Process another file
-                    </button>
+                    <p class="text-xs text-gray-400 mt-4">Supported formats: JPG, PNG, MP4, PDF</p>
                 </div>
             </section>
 
-            <!-- AdSense: In-Content Placement -->
             <div class="w-full bg-gray-200 py-12 flex justify-center items-center mt-12 mb-8">
-                <!-- Google AdSense In-content Placeholder -->
                 <span class="text-gray-500 text-sm">Ad Placement: In-Content</span>
             </div>
             
         </div>
 
-        <!-- Sidebar Area -->
         <aside class="w-full md:w-1/4 flex flex-col gap-6">
-            <!-- AdSense: Sidebar Placement -->
             <div class="w-full h-64 bg-gray-200 flex justify-center items-center">
-                <!-- Google AdSense Sidebar Placeholder -->
                 <span class="text-gray-500 text-sm">Ad Placement: Sidebar (Desktop)</span>
             </div>
             <div class="w-full h-64 bg-gray-200 flex justify-center items-center hidden md:flex">
-                <!-- Google AdSense Sidebar Placeholder 2 -->
                 <span class="text-gray-500 text-sm">Ad Placement: Sidebar 2</span>
             </div>
         </aside>
 
     </main>
 
-    <!-- AdSense: Footer Placement -->
-    <div class="w-full bg-gray-200 py-4 flex justify-center items-center my-4 max-w-7xl mx-auto">
-        <!-- Google AdSense Footer Placeholder -->
-        <span class="text-gray-500 text-sm">Ad Placement: Footer</span>
-    </div>
-
-    <!-- Footer -->
     <footer class="bg-white border-t border-gray-200 mt-auto">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-gray-500 text-sm">&copy; 2023 Watermark Remover. All rights reserved.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0 text-sm">
-                <a href="/privacy" class="text-gray-500 hover:text-gray-900">Privacy Policy</a>
-                <a href="/terms" class="text-gray-500 hover:text-gray-900">Terms of Service</a>
-            </div>
+        <div class="max-w-7xl mx-auto py-6 px-4 flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm">&copy; 2024 Watermark Remover. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Custom JavaScript -->
-    <script src="/static/js/main.js"></script>
-    <script>
-  const browseBtn = document.getElementById('browse-btn'); // Dhyan rahe id match ho
-  const fileInput = document.getElementById('file-input');
-<script>
-    const fileInput = document.getElementById('file-input');
-    const browseBtn = document.getElementById('browse-btn');
-    const modal = document.getElementById('choice-modal');
-    const fileNameSpan = document.getElementById('selected-file-name');
-    const loading = document.getElementById('loading-overlay');
-
-    // Browse button click handle
-    browseBtn.addEventListener('click', () => fileInput.click());
-
-    // Jab file select ho jaye
-    fileInput.addEventListener('change', function() {
-        if (this.files.length > 0) {
-            fileNameSpan.innerText = this.files[0].name;
-            modal.classList.remove('hidden'); // Popup dikhao
-        }
-    });
-
-    // Modal close handle
-    document.getElementById('close-modal').addEventListener('click', () => {
-        modal.classList.add('hidden');
-        fileInput.value = ''; // Reset input
-    });
-
-    // Logic for sending file to Server (Flask)
-    async function uploadFile(mode) {
-        const file = fileInput.files[0];
-        const formData = new FormData();
-        formData.append('file', file);
-        formData.append('mode', mode); // Basic ya Advanced mode
-
-        modal.classList.add('hidden'); // Modal chupao
-        loading.classList.remove('hidden'); // Loading dikhao
-
-        try {
-            // Humare app.py ke /upload endpoint par file bhejna
-            const response = await fetch('/upload', {
-                method: 'POST',
-                body: formData
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-                // Agar download link mil jaye
-                window.location.href = result.download_url;
-            } else {
-                alert("Error: " + result.error);
-            }
-        } catch (error) {
-            console.error("Upload failed:", error);
-            alert("Something went wrong during upload.");
-        } finally {
-            loading.classList.add('hidden');
-        }
-    }
-        
-    // Button clicks handle karein
-    document.getElementById('basic-remove-btn').addEventListener('click', () => uploadFile('basic'));
-    document.getElementById('advanced-remove-btn').addEventListener('click', () => uploadFile('advanced'));
-</script>
-    
-  // Jab button par click ho, toh hidden file input khul jaye
-  browseBtn.addEventListener('click', function() {
-    fileInput.click();
-  });
-
-  // Jab file select ho jaye, toh alert dikhaye (Test karne ke liye)
-  fileInput.addEventListener('change', function() {
-    if(fileInput.files.length > 0) {
-      alert("File selected: " + fileInput.files[0].name);
-      // Baad mein hum yahan 'Basic' ya 'Advanced' option dikhane ka code dalenge
-    }
-  });
-    </script>
     <div id="choice-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
-    <div class="bg-white p-8 rounded-xl max-w-sm w-full text-center shadow-2xl">
-        <h3 class="text-xl font-bold mb-4">Choose Removal Method</h3>
-        <p class="text-gray-600 mb-6 text-sm">Select how you want to remove the watermark from <span id="selected-file-name" class="font-bold text-blue-600"></span></p>
-        
-        <div class="space-y-4">
-            <button id="basic-remove-btn" class="w-full py-3 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold flex items-center justify-center gap-2 transition">
-                <span>🪄</span> Basic Blur (Free)
-            </button>
+        <div class="bg-white p-8 rounded-xl max-w-sm w-full text-center shadow-2xl">
+            <h3 class="text-xl font-bold mb-4">Choose Removal Method</h3>
+            <p class="text-gray-600 mb-6 text-sm">Select how you want to remove the watermark from <br><span id="selected-file-name" class="font-bold text-blue-600"></span></p>
             
-            <button id="advanced-remove-btn" class="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition">
-                <span>🚀</span> Advanced AI (Pro)
-            </button>
+            <div class="space-y-4">
+                <button id="basic-remove-btn" class="w-full py-3 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold flex items-center justify-center gap-2 transition">
+                    <span>🪄</span> Basic Blur (Free)
+                </button>
+                
+                <button id="advanced-remove-btn" class="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition">
+                    <span>🚀</span> Advanced AI (Pro)
+                </button>
+            </div>
+            
+            <button id="close-modal" class="mt-4 text-xs text-gray-400 underline">Cancel</button>
         </div>
-        
-        <button id="close-modal" class="mt-4 text-xs text-gray-400 underline">Cancel</button>
     </div>
-</div>
 
-<div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-90 hidden flex-col items-center justify-center z-50">
-    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-600 border-solid mb-4"></div>
-    <p class="text-blue-600 font-bold">Processing your file...</p>
-</div>
+    <div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-90 hidden flex-col items-center justify-center z-50">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-600 border-solid mb-4"></div>
+        <p class="text-blue-600 font-bold">Processing your file...</p>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const browseBtn = document.getElementById('browse-btn');
+        const modal = document.getElementById('choice-modal');
+        const fileNameSpan = document.getElementById('selected-file-name');
+        const loading = document.getElementById('loading-overlay');
+
+        // Button click par file input open karein
+        browseBtn.addEventListener('click', () => fileInput.click());
+
+        // Jab file select ho jaye
+        fileInput.addEventListener('change', function() {
+            if (this.files.length > 0) {
+                fileNameSpan.innerText = this.files[0].name;
+                modal.classList.remove('hidden'); // Modal dikhayein
+            }
+        });
+
+        // Cancel button
+        document.getElementById('close-modal').addEventListener('click', () => {
+            modal.classList.add('hidden');
+            fileInput.value = ''; // Input clear karein
+        });
+
+        // Server ko file bhejna
+        async function uploadFile(mode) {
+            const file = fileInput.files[0];
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('mode', mode); // 'basic' ya 'advanced'
+
+            modal.classList.add('hidden');
+            loading.classList.remove('hidden'); // Loading ghumayein
+
+            try {
+                // app.py me /upload/image route par bhejna padega (kyunki app.py me API routes alag hain)
+                // Note: Abhi hum sirf image testing ke liye logic bhej rahe hain
+                let uploadUrl = '/api/upload/image'; 
+                
+                if (file.name.endsWith('.mp4')) uploadUrl = '/api/upload/video';
+                if (file.name.endsWith('.pdf')) uploadUrl = '/api/upload/pdf';
+
+                const response = await fetch(uploadUrl, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok && !result.error) {
+                    alert("Success! Download ready.");
+                    // window.location.href = result.download_url; // app.py update karne ke baad ye chalega
+                } else {
+                    alert("Error: " + (result.error || "Processing failed"));
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Something went wrong!");
+            } finally {
+                loading.classList.add('hidden');
+            }
+        }
+
+        document.getElementById('basic-remove-btn').addEventListener('click', () => uploadFile('basic'));
+        document.getElementById('advanced-remove-btn').addEventListener('click', () => uploadFile('advanced'));
+    </script>
 </body>
 </html>

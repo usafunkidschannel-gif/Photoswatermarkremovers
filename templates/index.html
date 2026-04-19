@@ -130,7 +130,68 @@
     <script>
   const browseBtn = document.getElementById('browse-btn'); // Dhyan rahe id match ho
   const fileInput = document.getElementById('file-input');
+<script>
+    const fileInput = document.getElementById('file-input');
+    const browseBtn = document.getElementById('browse-btn');
+    const modal = document.getElementById('choice-modal');
+    const fileNameSpan = document.getElementById('selected-file-name');
+    const loading = document.getElementById('loading-overlay');
 
+    // Browse button click handle
+    browseBtn.addEventListener('click', () => fileInput.click());
+
+    // Jab file select ho jaye
+    fileInput.addEventListener('change', function() {
+        if (this.files.length > 0) {
+            fileNameSpan.innerText = this.files[0].name;
+            modal.classList.remove('hidden'); // Popup dikhao
+        }
+    });
+
+    // Modal close handle
+    document.getElementById('close-modal').addEventListener('click', () => {
+        modal.classList.add('hidden');
+        fileInput.value = ''; // Reset input
+    });
+
+    // Logic for sending file to Server (Flask)
+    async function uploadFile(mode) {
+        const file = fileInput.files[0];
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('mode', mode); // Basic ya Advanced mode
+
+        modal.classList.add('hidden'); // Modal chupao
+        loading.classList.remove('hidden'); // Loading dikhao
+
+        try {
+            // Humare app.py ke /upload endpoint par file bhejna
+            const response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                // Agar download link mil jaye
+                window.location.href = result.download_url;
+            } else {
+                alert("Error: " + result.error);
+            }
+        } catch (error) {
+            console.error("Upload failed:", error);
+            alert("Something went wrong during upload.");
+        } finally {
+            loading.classList.add('hidden');
+        }
+    }
+
+    // Button clicks handle karein
+    document.getElementById('basic-remove-btn').addEventListener('click', () => uploadFile('basic'));
+    document.getElementById('advanced-remove-btn').addEventListener('click', () => uploadFile('advanced'));
+</script>
+    
   // Jab button par click ho, toh hidden file input khul jaye
   browseBtn.addEventListener('click', function() {
     fileInput.click();

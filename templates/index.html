@@ -186,7 +186,7 @@
             loading.classList.add('hidden');
         }
     }
-
+        
     // Button clicks handle karein
     document.getElementById('basic-remove-btn').addEventListener('click', () => uploadFile('basic'));
     document.getElementById('advanced-remove-btn').addEventListener('click', () => uploadFile('advanced'));
@@ -205,5 +205,28 @@
     }
   });
     </script>
+    <div id="choice-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white p-8 rounded-xl max-w-sm w-full text-center shadow-2xl">
+        <h3 class="text-xl font-bold mb-4">Choose Removal Method</h3>
+        <p class="text-gray-600 mb-6 text-sm">Select how you want to remove the watermark from <span id="selected-file-name" class="font-bold text-blue-600"></span></p>
+        
+        <div class="space-y-4">
+            <button id="basic-remove-btn" class="w-full py-3 bg-gray-100 hover:bg-gray-200 rounded-lg font-semibold flex items-center justify-center gap-2 transition">
+                <span>🪄</span> Basic Blur (Free)
+            </button>
+            
+            <button id="advanced-remove-btn" class="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition">
+                <span>🚀</span> Advanced AI (Pro)
+            </button>
+        </div>
+        
+        <button id="close-modal" class="mt-4 text-xs text-gray-400 underline">Cancel</button>
+    </div>
+</div>
+
+<div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-90 hidden flex-col items-center justify-center z-50">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-600 border-solid mb-4"></div>
+    <p class="text-blue-600 font-bold">Processing your file...</p>
+</div>
 </body>
 </html>

@@ -127,5 +127,22 @@
 
     <!-- Custom JavaScript -->
     <script src="/static/js/main.js"></script>
+    <script>
+  const browseBtn = document.getElementById('browse-btn'); // Dhyan rahe id match ho
+  const fileInput = document.getElementById('file-input');
+
+  // Jab button par click ho, toh hidden file input khul jaye
+  browseBtn.addEventListener('click', function() {
+    fileInput.click();
+  });
+
+  // Jab file select ho jaye, toh alert dikhaye (Test karne ke liye)
+  fileInput.addEventListener('change', function() {
+    if(fileInput.files.length > 0) {
+      alert("File selected: " + fileInput.files[0].name);
+      // Baad mein hum yahan 'Basic' ya 'Advanced' option dikhane ka code dalenge
+    }
+  });
+    </script>
 </body>
 </html>
